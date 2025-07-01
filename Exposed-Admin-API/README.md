@@ -1,4 +1,4 @@
-Absolutely. Below is a **complete, structured, and OffSec-style breakdown** of the **"Exposed Admin API"** attack method to solve the **"Login Admin"** challenge in **OWASP Juice Shop**, using the **unauthenticated admin REST endpoint**. This walkthrough includes:
+Below is a **complete, structured, and OffSec-style breakdown** of the **"Exposed Admin API"** attack method to solve the **"Login Admin"** challenge in **OWASP Juice Shop**, using the **unauthenticated admin REST endpoint**. This walkthrough includes:
 
 ---
 
