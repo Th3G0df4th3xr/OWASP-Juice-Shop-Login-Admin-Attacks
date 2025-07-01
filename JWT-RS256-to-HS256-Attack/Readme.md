@@ -1,4 +1,4 @@
-Absolutely. Here's a **comprehensive, OffSec-grade deep dive** into the exploitation process of the **JWT RS256 to HS256 Downgrade Attack** specifically against the **OWASP Juice Shop "Login Admin"** challenge.
+This is a **comprehensive, OffSec-grade deep dive** into the exploitation process of the **JWT RS256 to HS256 Downgrade Attack** specifically against the **OWASP Juice Shop "Login Admin"** challenge.
 
 ---
 
