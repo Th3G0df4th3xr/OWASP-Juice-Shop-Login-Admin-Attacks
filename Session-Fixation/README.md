@@ -1,4 +1,4 @@
-Below is a deep-dive, fully elaborated, professional OffSec-style version of the README.md for the Session Fixation via Unprotected JWT attack in OWASP Juice Shop.
+This is a deep-dive, fully elaborated, professional OffSec-style version of the README.md for the Session Fixation via Unprotected JWT attack in OWASP Juice Shop.
 
 It includes:
 
