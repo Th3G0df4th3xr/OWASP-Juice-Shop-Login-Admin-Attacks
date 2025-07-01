@@ -1,4 +1,4 @@
-Certainly. Below is a **professional, elongated, and well-structured version** of both the `README.md` and `TODO.md` for the **Local Storage Tampering – JWT Overwrite Exploit** method to solve the **Login Admin** challenge in OWASP Juice Shop. This version uses formal OffSec-style language and includes additional clarity, context, and technical expectations for each step.
+This is a **professional, and well-structured version** of both the `README.md` and `TODO.md` for the **Local Storage Tampering – JWT Overwrite Exploit** method to solve the **Login Admin** challenge in OWASP Juice Shop. This version uses formal OffSec-style language and includes additional clarity, context, and technical expectations for each step.
 
 ---
 
