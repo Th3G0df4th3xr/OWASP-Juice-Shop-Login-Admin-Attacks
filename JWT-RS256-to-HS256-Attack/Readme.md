@@ -1,3 +1,108 @@
+# 🔓 JWT RS256 to HS256 Downgrade Attack
+
+## 🎯 Objective
+Exploit a vulnerable JWT implementation that accepts a user-signed token by downgrading its algorithm from `RS256` (asymmetric) to `HS256` (symmetric), and using the server’s public key as the HMAC secret.
+
+---
+
+## 🧠 Attack Flow
+
+1. **Log in as a regular user** to obtain a valid JWT token from browser `localStorage`.
+2. **Decode the JWT** using a tool like [jwt.io](https://jwt.io) or `jwt_tool.py`.
+3. **Change the header**:  
+   ```json
+   { "alg": "HS256", "typ": "JWT" }
+
+
+
+
+📄 3. Create a new README.md
+bash
+Copy
+Edit
+nano README.md
+Paste this:
+
+markdown
+Copy
+Edit
+# 🔓 JWT RS256 to HS256 Downgrade Attack
+
+## 🎯 Objective
+Exploit a vulnerable JWT implementation that accepts a user-signed token by downgrading its algorithm from `RS256` (asymmetric) to `HS256` (symmetric), and using the server’s public key as the HMAC secret.
+
+---
+
+## 🧠 Attack Flow
+
+1. **Log in as a regular user** to obtain a valid JWT token from browser `localStorage`.
+2. **Decode the JWT** using a tool like [jwt.io](https://jwt.io) or `jwt_tool.py`.
+3. **Change the header**:  
+   ```json
+   { "alg": "HS256", "typ": "JWT" }
+Modify the payload:
+Change:
+
+json
+Copy
+Edit
+{ "email": "admin@juice-sh.op", "role": "admin" }
+Sign the JWT with the server’s public key as the HMAC secret using a tool like:
+
+bash
+Copy
+Edit
+jwt_tool.py -S HS256 -p 'admin@juice-sh.op' --secret <public_key>
+Replace the token in browser localStorage['token'].
+
+Reload the app and go to /#/administration.
+
+🧪 Techniques & Methods Used
+JWT Forgery
+
+Algorithm Confusion (RS256 → HS256)
+
+JWT Header Manipulation
+
+Public Key as Shared Secret (logic flaw)
+
+✅ Indicators of Success
+Admin role visible in UI
+
+Access to /administration
+
+Scoreboard shows challenge completed
+
+yaml
+Copy
+Edit
+
+Then save with `Ctrl + O`, `Enter`, then exit with `Ctrl + X`.
+
+---
+
+### 🗒️ 4. Create a new `TO-DO.md`
+
+```bash
+nano TO-DO.md
+Paste this:
+
+markdown
+Copy
+Edit
+# ✅ TO-DO – JWT RS256 to HS256 Downgrade Attack
+
+- [x] Log in and extract JWT
+- [x] Decode JWT
+- [x] Modify `alg` to `HS256`
+- [x] Modify `email` and `role` in payload
+- [x] Sign with public key as HMAC secret
+- [x] Replace token in browser localStorage
+- [x] Access admin panel and verify
+Save and exit.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 This is a **comprehensive, OffSec-grade deep dive** into the exploitation process of the **JWT RS256 to HS256 Downgrade Attack** specifically against the **OWASP Juice Shop "Login Admin"** challenge.
 
 ---
